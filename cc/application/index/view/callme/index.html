@@ -1,0 +1,313 @@
+{include file="common\header"}
+<div id="a1portalSkin_headerAreaA" class="header"> <a name="28139" id="28139"></a>
+    <div class="module-default">
+        <div class="module-inner">
+            <div id="a1portalSkin_ctr333112333112_mainArea" class="module-content">
+                <div class="responsive-carousel carousel clearfix">
+                    <div id="responsive-333090">
+                        <div class="carousel-item" style="">
+                            <div class="carousel-img"><a href="javascript:;" target=""><img src="{$res.thumb}" alt="香叶传奇"/></a></div>
+                        </div>
+                    </div>
+                    <div class="carousel-btn carousel-btn-fixed" id="carousel-page-333090"></div>
+                    <script type="text/javascript">
+
+     
+
+  $(window).load(function(){
+
+   $("#responsive-333090").carouFredSel({
+
+    responsive : true,
+
+    width       : '100%',
+    height       : '100%',
+
+    items  : { visible : 1 },
+
+    auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+    swipe     : { onTouch:true, onMouse:true },
+
+    pagination  : "#carousel-page-333090"
+
+    //prev   : { button:"#carousel-prev-333090"},
+
+    //next   : { button:"#carousel-next-333090"},
+
+    //scroll : { fx : "coverfade", duration : 1200, timeoutDuration : 1500 }  
+
+   });
+
+            
+
+            $("#responsive-333090 .carousel-item").show();
+
+
+
+   //选项卡兼容代码
+
+   $(".tabs-nav > li > a").click(function(){
+
+
+
+    var _tabIndex = $(this).parents(".tabs-nav").find("li").index($(this).parent());
+
+
+
+    if( $(this).parents(".tabs-default").find(".tab-box").eq(_tabIndex).find("#responsive-333090").length > 0 ){
+
+     
+
+     /* S 原插件代码*/
+
+     $("#responsive-333090").carouFredSel({
+
+      responsive : true,
+
+      width       : '100%',
+      height       : '100%',
+
+      items  : { visible : 1 },
+
+      auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+      swipe     : { onTouch:true, onMouse:true },
+
+      pagination  : "#carousel-page-333090"
+
+      //prev   : { button:"#carousel-prev-333090"},
+
+      //next   : { button:"#carousel-next-333090"},
+
+      //scroll : { fx : "coverfade", duration : 1200, timeoutDuration : 1500 }  
+
+     });
+
+
+
+     $("#responsive-333090 .carousel-item").show();
+
+     /* E 原插件代码*/
+
+    };
+
+   });
+
+
+
+
+
+  });
+
+</script></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="main">
+    <section class="full-page-menu" skinobjectzone="menu_2977">
+      <div class="full-page-menu-content">
+        <div class="page-width">
+          <ul class="clearfix">
+            
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="page-width clearfix">
+      <div class="full-page-content">
+        <div id="a1portalSkin_mainArea" class="full-page-content-wrapper"> <a name="25978" id="25978"></a>
+          <div class="module-default">
+            <div class="module-inner">
+              <div id="a1portalSkin_ctr333089333089_mainArea" class="module-content">
+                <div class="qhd-content">
+                <div style="text-align: center;">
+	<iframe frameborder="0" height="648" id="myiframe" marginheight="0" marginwidth="0" scrolling="no" src="{$Think.config.cc_url}/index/api" width="504"></iframe></div>
+{$res.content}
+<script>
+         $(function(){
+            function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+             if(window.screen.width>600) {
+                 $("#myiframe").attr('height','648');
+                  $("#myiframe").attr('width','504');
+                   $("#myiframe").attr('src','http://j.map.baidu.com/uAAHN');
+               }else {
+               
+                  $("#myiframe").attr('height','631');
+                  $("#myiframe").attr('width','264');
+                   $("#myiframe").attr('src','http://j.map.baidu.com/BRBHN');
+             }
+          })        
+      </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  {include file="common\footer"}
+
+<script>
+  $(function(){
+    $(".gotop-wrapper2").on("click",function(){
+     console.log("ddd")
+      $(".zxh").show()
+    })
+    $(".zxh .form-input .btn-off").on("click",function(){
+      $(".zxh").hide();
+    })
+
+    $(window).scroll(function() {
+           var scrollY = $(document).scrollTop();// 获取垂直滚动的距离，即滚动了多少
+
+           if (scrollY > 550){ //如果滚动距离大于550px则隐藏，否则删除隐藏类
+               $('.gotop-wrapper2').show()
+           }
+           else {
+               $('.gotop-wrapper2').hide()
+           }
+
+
+
+        });
+
+
+               $(".text-form").keyup(function() {
+                   //定义最多输入数字
+                   var $max =100;
+                   //取得用户输入的字符的长度
+                   var $length = $(".text-form").val().length;
+                   if ($length >= $max) {
+                       //判断是否超过最长数字
+                       $(".word").html("0");
+                   }
+                   else {
+                       //没有超过就修改剩余字数
+                       $(".word").html(($max - $length));
+                   }
+               })
+
+     $(".names-form").on("blur",function(){
+      if ($(this).val()!="") {
+        $(".input-names").addClass('Correct');
+        $(".tips-names").html("");
+
+      }else {
+        $(".tips-names").html("姓名不能为空");
+        $(this).focus()
+        $(".input-names").removeClass('Correct');
+      }
+     })
+
+     $(".text-form").on("blur",function(){
+      if ($(this).val()!="") {
+        // $(".input-names").addClass('Correct');
+        $(".tips-text").html("");
+
+      }else {
+        $(".tips-text").html("内容不能为空");
+        $(this).focus()
+        // $(".input-names").removeClass('Correct');
+      }
+     })
+
+
+
+
+     $(".phone-form").on("blur",function(){
+
+      if ($(this).val()!="") {
+        $(".input-phone").addClass('Correct');
+        $(".tips-phone").html("");
+
+      }else {
+        $(".tips-phone").html("手机号不能为空");
+        $(this).focus()
+        $(".input-phone").removeClass('Correct');
+        return false
+      }
+
+      if (!$(this).val().match(/^1\d{10}$/)) {
+        $(".tips-phone").html("手机号有误");
+        $(this).focus()
+        $(".input-phone").removeClass('Correct');
+        return false
+      } else {
+        $(".input-phone").addClass('Correct');
+        $(".tips-phone").html("");
+      }
+
+     })
+
+     $(".emeal-form").on("blur",function(){
+
+
+
+
+      if ($(this).val()!="") {
+        $(".input-emeal").addClass('Correct');
+        $(".tips-emeal").html("");
+
+      }else {
+        $(".tips-emeal").html("邮箱不能为空");
+        $(this).focus()
+        $(".input-emeal").removeClass('Correct');
+        return false
+      }
+
+      if (!$(this).val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+        $(".tips-emeal").html("邮箱有误");
+        $(this).focus()
+        $(".input-emeal").removeClass('Correct');
+        return false
+      } else {
+        $(".input-emeal").addClass('Correct');
+        $(".tips-emeal").html("");
+      }
+
+
+     //  if (!$(this).val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+     //    $(".input-emeal").addClass('error');
+     //    $(".tips-emeal").html("邮箱输入有误");
+
+     //  }else {
+     // $(".input-emeal").removeClass('error');
+     // $(".tips-emeal").html("");
+     //  }
+     })
+
+
+  })
+</script>
+</div>
+<div id="a1portalSkin_fixedBottomArea" class="QHDEmptyArea fixed-bottom"></div>
+<div id="a1portalSkin_fixed-left" class="QHDEmptyArea fixed-side fixed-left" style="top: 991.954px;"></div>
+<div id="a1portalSkin_fixed-right" class="QHDEmptyArea fixed-side fixed-right" style="top: 991.954px;"></div>
+<div id="popup" class="popup">
+  <div class="popup-content not-animated" data-animate="fadeInDown">
+    <div id="a1portalSkin_popup-area" class="QHDEmptyArea popup-content-wrapper"></div>
+    <div class="popup-close-btn"><a href="javascript:;" title="关闭"><span>关闭</span></a></div>
+  </div>
+  <div class="popup-overlay"></div>
+</div>
+<div class="gotop-wrapper"><a href="javascript:;" class="fixed-gotop gotop" style="display: block;"></a></div>
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

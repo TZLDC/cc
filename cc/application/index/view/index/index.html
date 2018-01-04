@@ -1,0 +1,462 @@
+{include file="common/header"}
+    <div id="a1portalSkin_headerAreaA" class="header"> <a name="28138" id="28138"></a>
+      <div class="module-default">
+        <div class="module-inner">
+          <div id="a1portalSkin_ctr333088333088_mainArea" class="module-content">
+            <div class="slideshow carousel clearfix" style="overflow:hidden;">
+              <div class="caroufredsel_wrapper" >
+                  <div id="carousel-333088" >
+                      {volist name="aders" id="ader"}
+                      <div class="carousel-item" style="margin-right: 0px;">
+                         <div class="carousel-img" >
+                             <a href="javascript:;" target=""><img src="{$ader.img}" alt="banner2" ></a>
+                         </div>
+                      </div>
+                      {/volist}
+                   </div>
+              </div>
+              <div class="carousel-btn carousel-btn-fixed" id="carousel-page-333088" style="display: block;"><a href="#" class=""><span>1</span></a><a href="#" class="selected"><span>2</span></a><a href="#" class=""><span>3</span></a></div>
+            </div>
+            <script type="text/javascript">
+ $(window).bind("load resize",function(){
+
+  $("#carousel-333088").carouFredSel({
+
+   width       : '100%',
+
+   items  : { visible : 1 },
+
+   auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+   swipe     : { onTouch:true, onMouse:true },
+
+   pagination  : "#carousel-page-333088"
+
+   //prev   : { button:"#carousel-prev-333088"},
+
+   //next   : { button:"#carousel-next-333088"},
+
+   //scroll   : { fx : "crossfade" }
+
+  });
+
+
+
+  //选项卡兼容代码
+
+  $(".tabs-nav > li > a").click(function(){
+
+
+
+   var _tabIndex = $(this).parents(".tabs-nav").find("li").index($(this).parent());
+
+
+
+   if( $(this).parents(".tabs-default").find(".tab-box").eq(_tabIndex).find("#carousel-333088").length > 0 ){
+
+
+
+    /* S 原插件代码*/
+
+    $("#carousel-333088").carouFredSel({
+
+     width       : '100%',
+
+     items  : { visible : 1 },
+
+     auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+     swipe     : { onTouch:true, onMouse:true },
+
+     pagination  : "#carousel-page-333088"
+
+     //prev   : { button:"#carousel-prev-333088"},
+
+     //next   : { button:"#carousel-next-333088"},
+
+     //scroll   : { fx : "crossfade" }
+
+    });
+
+    /* E 原插件代码*/
+
+   };
+
+  });
+
+ });
+
+$(document).ready(function() {
+    $('#spzx li').last().css('margin-right','0');
+});
+</script> </div>
+        </div>
+      </div>
+    </div>
+    <section class="main">
+      <div id="a1portalSkin_mainArea" class="full-screen clearfix"> <a name="28061" id="28061"></a>
+        <div class="module-full-screen module-full-screen-gray-expand module-full-screen-gray" style="">
+          <div class="module-inner fadeInDown animated" data-animate="fadeInDown" data-delay="200">
+            <div class="page-width">
+              <div class="module-full-screen-title">
+                <h2>{$res.0.name}</h2>
+                <div class="module-title-content"><i class="mark-left"></i>
+                  <h3>每一项食材都是探寻到最好的原产地，传承传统，大师研发，工匠厨师制作，好吃，健康，舒适！</h3>
+                  <i class="mark-right"></i></div>
+              </div>
+              <div id="a1portalSkin_ctr333082333082_mainArea" class="module-full-screen-content">
+                  <div class="scrollable carousel product-scrollable product-set clearfix">
+                  <ul id="scrollable-333082" class="scrollable-default clearfix">
+                   {volist name="res" id="food"}
+                    <li >
+                      <div class="scrollable-item">
+                        <p class="scrollable-img"><a target="_blank" href="{$Think.config.cc_url}/index/imglist/lists?pid={$food.cid}&cid={$food.Id}"><img src="{$food.imgs}" alt="{$food.title}"></a></p>
+                        <h2><a target="_blank" href="{$Think.config.cc_url}/index/imglist/lists?pid={$food.cid}&cid={$food.Id}">{$food.title}</a></h2>
+                      </div>
+                    </li>
+                      {/volist}
+                  </ul>
+                  <div class="carousel-direction"><a class="carousel-prev " id="carousel-prev-333082" href="javascript:;" ><span>&lt;</span></a><a class="carousel-next" id="carousel-next-333082" href="javascript:;"><span>&gt;</span></a></div>
+                </div>
+
+                <!-- E scrollable--><!-- End_Module_333082 --></div>
+              <div class="module-full-screen-more"><a href="{$Think.config.cc_url}/index/imglist/index?pid={$res.0.cid}">更多</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- E module-full-screen --><!-- Start_Module_333083 --><a name="28063" id="28063"></a><!-- S module-full-screen -->
+
+       <a name="28065" id="28065"></a>
+
+          <div class="module-full-screen module-full-screen-hl" style="">
+              <div class="module-inner not-animated" data-animate="fadeInDown" data-delay="200">
+                  <div class="page-width">
+                      <div class="module-full-screen-title">
+                          <h2>{$s.0.content}</h2>
+                      </div>
+                      <div id="a1portalSkin_ctr333084333084_mainArea" class="module-full-screen-content"><!-- Start_Module_333084 -->
+
+                          <div class="qhd-content">
+                              <p class="news-pp">
+                                  <span class="sp1">{$s.1.content}</span><br />
+                                  <span class="sp2">{$s.2.content}</span>
+                              </p>
+                              <p class="news-pp">
+                                  <span class="sp1">{$s.3.content}</span><br />
+                                  <span class="sp2">{$s.4.content}</span>
+                              </p>
+
+                              <p class="news-pp">
+                                  <span class="sp1">{$s.5.content}</span><br />
+                                  <span class="sp2">{$s.6.content}</span>
+                              </p>
+
+                              <p class="news-pp">
+                                  <span class="sp1">{$s.7.content}</span><br />
+                                  <span class="sp2">{$s.8.content}</span>
+                              </p>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+       <a name="28064" id="28064"></a>
+
+        <div class="module-full-screen module-full-screen-gray-expand module-full-screen-gray" style="">
+          <div class="module-inner not-animated" data-animate="fadeInDown" data-delay="200">
+            <div class="page-width">
+              <div class="module-full-screen-title">
+                <h2>{$men.0.name}</h2>
+                <div class="module-title-content"><i class="mark-left"></i>
+                  <h3>在每个店面上，他们用朴实和勤奋书写着生活的每一天，书写着我们的明天</h3>
+                  <i class="mark-right"></i></div>
+              </div>
+              <div id="a1portalSkin_ctr333085333085_mainArea" class="module-full-screen-content">
+                <div class="scrollable carousel clearfix" style="overflow: visible;">
+                  <ul id="scrollable-333085" class="scrollable-default clearfix">
+                      {volist name="men" id="mens"}
+                      <li>
+                      <p><a href="{$Think.config.cc_url}/index/imglist/lists?pid={$mens.cid}&cid={$mens.Id}" target="_blank"><img src="{$mens.imgs}" alt="{$mens.title}"></a></p>
+                      <h2><a href="{$Think.config.cc_url}/index/imglist/lists?pid={$mens.cid}&cid={$mens.Id}" target="_blank">{$mens.title}</a></h2>
+                    </li>
+                      {/volist}
+                  </ul>
+                  <div class="carousel-direction"><a class="carousel-prev" id="carousel-prev-333085" href="javascript:;" ><span>&lt;</span></a><a class="carousel-next" id="carousel-next-333085" href="javascript:;" ><span>&gt;</span></a></div>
+                </div>
+                </div>
+              <div class="module-full-screen-more"><a href="{$Think.config.cc_url}/index/imglist/index?pid={$men.0.cid}">更多</a></div>
+            </div>
+          </div>
+        </div>
+        <a name="28062" id="28062"></a>
+        <div class="module-full-screen" style="">
+          <div class="module-inner fadeInUp animated" data-animate="fadeInUp" data-delay="200">
+            <div class="page-width">
+              <div class="module-full-screen-title">
+                <h2>新闻资讯</h2>
+                <div class="module-title-content"><i class="mark-left"></i>
+                  <h3>了解企业动态和发展方向，了解企业的工作学习，了解企业的企业文化</h3>
+                  <i class="mark-right"></i></div>
+              </div>
+              <div id="a1portalSkin_ctr333086333086_mainArea" class="module-full-screen-content">
+
+                <div class="entry-list-time-hl-col entry-list-time-hl">
+                  <ul class="column marg-per5 clearfix">
+                      {volist name="ess" id="e"}
+                    <li class="col-2-1 last not-animated" data-animate="fadeInUp">
+                      <div class="entry-item">
+                        <div class="time">
+                          <p class="time-day">{$e.create_time|date="d",###}</p>
+                          <p class="time-date">{$e.create_time|date="Y-m",###}</p>
+                        </div>
+                        <div class="entry-title">
+                          <h2><a href="{$Think.config.cc_url}/index/article?pid={$piid}&id={$e.Id}" target="_blank">{$e.title}</a></h2>
+                        </div>
+                        <div class="entry-summary">
+                          <div class="qhd-content">
+                            <div>{$e.des}</div>
+                            <div> &nbsp;</div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                      {/volist}
+
+                  </ul>
+                </div>
+                </div>
+              <div class="module-full-screen-more"><a href="{$Think.config.cc_url}/index/page/lists?pid={$piid}&cid={$e.cid}">更多</a></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+    {include file="common/footer"}
+
+<script>
+  $(function(){
+    $(".gotop-wrapper2").on("click",function(){
+     console.log("ddd")
+      $(".zxh").show()
+    })
+    $(".zxh .form-input .btn-off").on("click",function(){
+      $(".zxh").hide();
+    })
+
+    $(window).scroll(function() {
+           var scrollY = $(document).scrollTop();// 获取垂直滚动的距离，即滚动了多少
+
+           if (scrollY > 550){ //如果滚动距离大于550px则隐藏，否则删除隐藏类
+               $('.gotop-wrapper2').show()
+           }
+           else {
+               $('.gotop-wrapper2').hide()
+           }
+
+
+
+        });
+               $(".text-form").keyup(function() {
+                   //定义最多输入数字
+                   var $max =100;
+                   //取得用户输入的字符的长度
+                   var $length = $(".text-form").val().length;
+                   if ($length >= $max) {
+                       //判断是否超过最长数字
+                       $(".word").html("0");
+                   }
+                   else {
+                       //没有超过就修改剩余字数
+                       $(".word").html(($max - $length));
+                   }
+               })
+
+     $(".names-form").on("blur",function(){
+      if ($(this).val()!="") {
+        $(".input-names").addClass('Correct');
+        $(".tips-names").html("");
+
+      }else {
+        $(".tips-names").html("姓名不能为空");
+        $(this).focus()
+        $(".input-names").removeClass('Correct');
+      }
+     })
+
+     $(".text-form").on("blur",function(){
+      if ($(this).val()!="") {
+        // $(".input-names").addClass('Correct');
+        $(".tips-text").html("");
+
+      }else {
+        $(".tips-text").html("内容不能为空");
+        $(this).focus()
+        // $(".input-names").removeClass('Correct');
+      }
+     })
+
+
+
+
+     $(".phone-form").on("blur",function(){
+
+      if ($(this).val()!="") {
+        $(".input-phone").addClass('Correct');
+        $(".tips-phone").html("");
+
+      }else {
+        $(".tips-phone").html("手机号不能为空");
+        $(this).focus()
+        $(".input-phone").removeClass('Correct');
+        return false
+      }
+
+      if (!$(this).val().match(/^1\d{10}$/)) {
+        $(".tips-phone").html("手机号有误");
+        $(this).focus()
+        $(".input-phone").removeClass('Correct');
+        return false
+      } else {
+        $(".input-phone").addClass('Correct');
+        $(".tips-phone").html("");
+      }
+
+     })
+
+     $(".emeal-form").on("blur",function(){
+
+
+
+
+      if ($(this).val()!="") {
+        $(".input-emeal").addClass('Correct');
+        $(".tips-emeal").html("");
+
+      }else {
+        $(".tips-emeal").html("邮箱不能为空");
+        $(this).focus()
+        $(".input-emeal").removeClass('Correct');
+        return false
+      }
+
+      if (!$(this).val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+        $(".tips-emeal").html("邮箱有误");
+        $(this).focus()
+        $(".input-emeal").removeClass('Correct');
+        return false
+      } else {
+        $(".input-emeal").addClass('Correct');
+        $(".tips-emeal").html("");
+      }
+
+
+     //  if (!$(this).val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)) {
+     //    $(".input-emeal").addClass('error');
+     //    $(".tips-emeal").html("邮箱输入有误");
+
+     //  }else {
+     // $(".input-emeal").removeClass('error');
+     // $(".tips-emeal").html("");
+     //  }
+     })
+
+
+  })
+</script>
+   </div>
+  <div id="a1portalSkin_fixedBottomArea" class="QHDEmptyArea fixed-bottom"></div>
+  <div id="a1portalSkin_fixed-left" class="QHDEmptyArea fixed-side fixed-left" style="top: 3095.5px;"></div>
+  <div id="a1portalSkin_fixed-right" class="QHDEmptyArea fixed-side fixed-right" style="top: 3095.5px;"></div>
+  <div id="popup" class="popup">
+    <div class="popup-content not-animated" data-animate="fadeInDown">
+      <div id="a1portalSkin_popup-area" class="QHDEmptyArea popup-content-wrapper"></div>
+      <div class="popup-close-btn"><a href="javascript:;" title="关闭"><span>关闭</span></a></div>
+    </div>
+    <div class="popup-overlay"></div>
+  </div>
+  <div class="gotop-wrapper"><a href="javascript:;" class="fixed-gotop gotop" style="display: block;"></a></div>
+  <div class="gotop-wrapper2" style="display: block;">
+    <a href="javascript:;" class="fixed-gotop  liuyanImg " style="display: block;height: 61px;"></a>
+  </div>
+
+  <div class="zxh">
+          <div class="form-input">
+             <form action="" id="form1" enctype="multipart/form-data" method="post">
+              <input type="hidden"  value="post">
+              <input type="hidden"  value="1">
+              <input type="hidden"  value="2">
+                <input type="hidden"  value="xingming,text;dianhua,int;youxiang,text;liuyan,multitext">
+                <input type="hidden"  value="9ae547bbb0400bb833068ebeac75937c">
+
+                  <div class="title">
+                      <i></i>留言板
+                  </div>
+                  <div class="input">
+                      <span>姓名</span>
+                      <div class="input-box">
+                          <input type="" name="name" id="xingming" value="" class="names-form">
+                          <span class="btn_Prompt input-names"></span>
+                          <span class="tipe-text tips-names"></span>
+                      </div>
+                  </div>
+                  <div class="input">
+                      <span>电话</span>
+                      <div class="input-box">
+                          <input type="" name="phone" id="" value="" class="phone-form" maxlength="">
+                          <span class="btn_Prompt input-phone"></span>
+                          <span class="tipe-text tips-phone"></span>
+                      </div>
+                  </div>
+                  <div class="input">
+                      <span>邮箱</span>
+                      <div class="input-box">
+                          <input type="" name="email" id="youxiang" value="" class="emeal-form">
+                          <span class="btn_Prompt input-emeal"></span>
+                          <span class="tipe-text tips-emeal"></span>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="textarea">
+                      <span>留言</span>
+                      <div class="input-box wordCount">
+                          <textarea id="liuyan" name="words" placeholder="我有话要说" class="text-form" maxlength="100"></textarea>
+                          <span class="btn_Prompt input-text"></span>
+                          <span class="tipe-text tips-text"></span>
+                          <span class="wordwrap">您还可以输入
+                              <var class="word">100</var>字符</span>
+                      </div>
+                  </div>
+                  <input type="button" id="btn" value="提交" class="btn-tj">
+              </form>
+              <div class="btn-off"></div>
+          </div>
+      </div>
+
+<script>
+    $('#btn').click(function(){
+        var data=$('#form1').serializeArray();
+        var postData={};
+        $(data).each(function(i){
+            postData[this.name]=this.value;
+        });
+        var url="{$Think.config.cc_url}/index/index/word";
+        var jump="{$Think.config.cc_rurl}";
+        $.post(url,postData,function(res){
+            if(res.status==1){
+                layer.open({
+                    content : res.message,
+                    icon : 1,
+                    yes : function(){
+                        location.href=jump;
+                    },
+                });
+            }else if(res.status==0){
+                layer.msg(res.message);
+            }
+        },'JSON');
+    })
+</script>
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
